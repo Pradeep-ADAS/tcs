@@ -82,15 +82,36 @@ The twin was validated using standard and real-world drive cycles, with a focus 
 - **Δω (wheel speed difference) control:** Tracks front–rear wheel angular velocity difference, optimized for launch control scenarios due to strong low-speed sensitivity.  
 - **Hybrid TCS strategy:** Combines Δω control for launch and jerk-based control for cruising, validated through extensive testing across multiple driving maneuvers to ensure robust traction performance across the full operating range.
 
-- <table>
+<table width="100%">
   <tr>
     <td align="center">
-      <img src="Simulink.PNG" width="100%"/><br>
+      <img src="Simulink.PNG" width="80%"/><br>
       <sub><b>Example Model</b>: Controller Development on Simulink.</sub>
     </td>
+  </tr>
+  <tr>
     <td align="center">
-      <img src="TCS_Control_Action.png" width="100%"/><br>
+      <img src="TCS_Control_Action.png" width="80%"/><br>
       <sub><b>Example Model</b>: Performance Analysis on Simulink.</sub>
     </td>
   </tr>
 </table>
+
+---
+
+🧪 **7. Validation Pipeline (MIL / SIL / HIL)**
+
+The Slip Reduction system was validated through a step-by-step approach, moving from pure simulation to real-time interaction to ensure reliable controller behavior.
+
+🔹 **Model-in-the-Loop (MIL)** <br>
+The control logic was first tested inside a full vehicle simulation (Altair MotionView + Simulink). This helped verify whether the slip control strategy works correctly under different driving scenarios like launch, braking, and low-μ conditions.
+
+🔹 **Software-in-the-Loop (SIL)** <br>
+The same controller was then run as standalone software and tested against the simulated vehicle model. This ensured the implementation behaves correctly without relying on ideal simulation blocks.
+
+🔹 **Hardware-in-the-Loop (HIL – Prototype Setup)** <br>
+A simple physical interface (breadboard-based setup) was used to manually send throttle inputs to the system in real time. This helped observe how the controller reacts to live driver-like inputs and validated responsiveness beyond pure simulation.
+
+This layered workflow helped progressively validate the system from simulation → software → real-time interaction, improving robustness and confidence in the final control design.
+
+---
