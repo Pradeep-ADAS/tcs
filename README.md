@@ -109,3 +109,14 @@ A simple physical interface (breadboard-based setup) was used to manually send t
 This layered workflow helped progressively validate the system from simulation → software → real-time interaction, improving robustness and confidence in the final control design.
 
 ---
+🧪 **8. Demo Results**
+
+<p align="center">
+  <img src="Traction_Control_Aggressive_GIF.gif" width="800"><br>
+  <sub><b>HIL Demonstration</b>: Manual throttle inputs applied through a prototype interface to evaluate real-time controller response.</sub>
+</p>
+
+<p align="center">
+  <img src="Traction_Control_Passive_GIF.gif" width="800"><br>
+  <sub><b>HIL Demonstration</b>: Manual throttle inputs applied through a prototype interface to evaluate real-time controller response.</sub>
+</p>
