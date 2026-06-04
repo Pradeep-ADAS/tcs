@@ -89,12 +89,6 @@ The twin was validated using standard and real-world drive cycles, with a focus 
       <sub><b>Example Model</b>: Controller Development on Simulink.</sub>
     </td>
   </tr>
-  <tr>
-    <td align="center">
-      <img src="TCS_Control_Action.png" width="80%"/><br>
-      <sub><b>Example Model</b>: Performance Analysis on Simulink.</sub>
-    </td>
-  </tr>
 </table>
 
 ---
