@@ -81,3 +81,16 @@ The twin was validated using standard and real-world drive cycles, with a focus 
 - **Slip-ratio control:** Directly monitors slip ratio and modulates torque when predefined thresholds are exceeded for real-time traction regulation.  
 - **Δω (wheel speed difference) control:** Tracks front–rear wheel angular velocity difference, optimized for launch control scenarios due to strong low-speed sensitivity.  
 - **Hybrid TCS strategy:** Combines Δω control for launch and jerk-based control for cruising, validated through extensive testing across multiple driving maneuvers to ensure robust traction performance across the full operating range.
+
+- <table>
+  <tr>
+    <td align="center">
+      <img src="Simulink.PNG" width="100%"/><br>
+      <sub><b>Example Model</b>: Controller Development on Simulink.</sub>
+    </td>
+    <td align="center">
+      <img src="TCS_Control_Action.png" width="100%"/><br>
+      <sub><b>Example Model</b>: Performance Analysis on Simulink.</sub>
+    </td>
+  </tr>
+</table>
