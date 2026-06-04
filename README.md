@@ -45,4 +45,39 @@ To address this, the Slip Reduction system in this project needs to be designed 
 
 🧠 **5. Digital Twin Modelling**
 
+Before controller development, the real-world electric 2-wheeler was replicated in Altair MotionView as a high-fidelity digital twin. The model includes the chassis, tire dynamics, powertrain, suspension, and rider inputs to closely represent real vehicle behavior.
 
+The twin was validated using standard and real-world drive cycles, with a focus on matching key vehicle dynamics outputs against prototype data. The simulation achieved 92–95% correlation accuracy, making it suitable for downstream control system development and testing.
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="Configure_Suspension_Settings.PNG" width="100%"/><br>
+      <sub><b>Vehicle & Rider Setup</b>: Set suspension and damping properties to match vehicle dynamics performance.</sub>
+    </td>
+    <td align="center">
+      <img src="Configure_Road_and_Driver.PNG" width="100%"/><br>
+      <sub><b>Road & Environment Setup</b>: Configure road profiles, friction levels and driving conditions to match real world.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="Configure_Bike_and_Driver.PNG" width="100%"/><br>
+      <sub><b>Suspension Tuning</b>: Defines 2-wheeler parameters (inclusing frame CAD) and rider inputs/ driver behaviour to match baseline dynamics.</sub>
+    </td>
+    <td align="center">
+      <img src="Sensor_Settings.png" width="100%"/><br>
+      <sub><b>Sensor Configuration</b>: Define virtual sensor locations to estimate critical quantities and control feedback.</sub>
+    </td>
+  </tr>
+</table>
+
+---
+
+📉 **6. Control System Modelling**
+
+- **Use-case analysis (TCS activation logic):** Evaluated acceleration/deceleration profiles to identify high-slip scenarios, highlighting maximum slip during vehicle launch and transient throttle/brake events.  
+- **Jerk-based control:** Uses rate of change of acceleration to detect aggressive driver inputs and proactively reduce slip during dynamic driving conditions.  
+- **Slip-ratio control:** Directly monitors slip ratio and modulates torque when predefined thresholds are exceeded for real-time traction regulation.  
+- **Δω (wheel speed difference) control:** Tracks front–rear wheel angular velocity difference, optimized for launch control scenarios due to strong low-speed sensitivity.  
+- **Hybrid TCS strategy:** Combines Δω control for launch and jerk-based control for cruising, validated through extensive testing across multiple driving maneuvers to ensure robust traction performance across the full operating range.
