@@ -111,12 +111,55 @@ This layered workflow helped progressively validate the system from simulation �
 ---
 🧪 **8. Demo Results**
 
+The Slip Reduction system supports **five intervention levels**, allowing the controller aggressiveness to be tuned based on rider preference and operating conditions.
+
+Higher intervention levels apply faster and stronger torque reduction upon slip detection, prioritizing traction and stability. Lower intervention levels provide a more gradual torque modulation strategy, preserving vehicle responsiveness while still mitigating wheel slip.
+
+The following simulations demonstrate controller behavior across different slip events and intervention settings.
+
 <p align="center">
   <img src="Traction_Control_Aggressive_GIF.gif" width="800"><br>
-  <sub><b>HIL Demonstration</b>: Manual throttle inputs applied through a prototype interface to evaluate real-time controller response.</sub>
+  <sub><b>Simulation Demo</b>: Working of Traction Control & Launch Control - Aggressive Mode</sub>
 </p>
 
 <p align="center">
   <img src="Traction_Control_Passive_GIF.gif" width="800"><br>
-  <sub><b>HIL Demonstration</b>: Manual throttle inputs applied through a prototype interface to evaluate real-time controller response.</sub>
+  <sub><b>Simulation Demo</b>: Working of Traction Control & Launch Control - Passive Mode</sub>
 </p>
+
+---
+
+📊 **9. Project Outcomes - Key Numbers**
+
+The developed Slip Reduction system not only improved vehicle safety and stability but also delivered measurable performance and efficiency gains.
+
+### Key Results
+
+- 📊 **0.2 s faster 0–60 km/h acceleration** during a full-throttle standing start compared to the baseline vehicle.
+- 📊 **0.35 s faster 0–100 km/h acceleration** during a full-throttle standing start compared to the baseline vehicle.
+- ⚡ **1.5–1.7% reduction in battery energy consumption** over the WLTC drive cycle relative to the baseline configuration.
+
+Beyond these performance benefits, the primary objective of the controller—**maintaining traction and vehicle stability under critical driving conditions**—was successfully achieved. The system demonstrated robust behavior across all evaluated test scenarios and satisfied the requirements of standard vehicle dynamics validation procedures defined by ARAI, India. 
+
+---
+
+⚠️ **10. Data Note**
+
+This repository showcases the **controller architecture, control logic, and representative Simulink models** developed as part of the project.
+
+The complete vehicle model, MotionView/MotionSolve co-simulation setup, calibration data, and validation datasets remain proprietary to Raptee HV and are not included in this repository.
+
+All shared content has been curated for demonstration and learning purposes while respecting confidentiality requirements.
+
+---
+
+👨‍💻 **11. Skills Demonstrated**
+
+Through this project, I demonstrate the ability to:
+
+- Develop end-to-end vehicle dynamics and control system models using **MATLAB/Simulink**.
+- Build and validate **digital twins** of real-world mechanical systems for virtual testing and product development.
+- Perform **co-simulation workflows** between Altair MotionView/MotionSolve plant models and Simulink-based controllers.
+- Apply **MIL, SIL, and prototype HIL validation methodologies** to mature control strategies toward real-world deployment.
+
+---
